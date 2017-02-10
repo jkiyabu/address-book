@@ -13,7 +13,7 @@
             </div>
             <div class="form-group">
                 <label for="phone">Phone</label>
-                <input class="form-control" id="phone" name="phone" type="text">
+                <input class="form-control" id="phone" name="phone" type="tel">
             </div>
             <div class="form-group">
                 <label for="address">Address</label>
@@ -24,7 +24,15 @@
         <form action="/delete_contacts" method="post">
             <button type="submit" class="btn btn-danger">Clear</button>
         </form>
-
-
+        {% if contacts is not empty %}
+            <h3>Your Contacts: </h3>
+            {% for contact in contacts %}
+                <h4>{{contact.getName}}</h4>
+                <ul>
+                    <li>Phone: {{contact.getPhone}}</li>
+                    <li>Address: {{contact.getAddress}}</li>
+                </ul>
+                {% endfor %}
+        {% endif %}
     </body>
 </html>
