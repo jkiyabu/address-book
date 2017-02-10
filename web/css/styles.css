@@ -1,0 +1,28 @@
+body {
+    background-color: lightblue;
+    font-family: monospace;
+}
+
+h1 {
+    font-family: fantasy;
+}
+
+h2 {
+    font-style: oblique;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+.jumbotron {
+    background-color: #337ab7;
+    color: white;
+    text-align: center;
+}
+
+img {
+    float: right;
+    width: 600px;
+    height: auto;
+}

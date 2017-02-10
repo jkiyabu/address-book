@@ -1,38 +1,48 @@
 <html>
     <head>
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
         <title>Address Book</title>
     </head>
     <body>
-        <h1>Address Book</h1>
-        <h3>Add a contact to your address book</h3>
-        <form action='/create_contact' method='post'>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input class="form-control" id="name" name="name" type="text">
+        <div class='container'>
+            <div class='jumbotron'>
+                <h1>Address Book</h1>
             </div>
-            <div class="form-group">
-                <label for="phone">Phone</label>
-                <input class="form-control" id="phone" name="phone" type="tel">
-            </div>
-            <div class="form-group">
-                <label for="address">Address</label>
-                <input class="form-control" id="address" name="address" type="text">
-            </div>
-            <button type="submit" class="btn btn-primary">Add</button>
-        </form>
-        <form action="/delete_contacts" method="post">
-            <button type="submit" class="btn btn-danger">Clear</button>
-        </form>
-        {% if contacts is not empty %}
-            <h3>Your Contacts: </h3>
-            {% for contact in contacts %}
-                <h4>{{contact.getName}}</h4>
-                <ul>
-                    <li>Phone: {{contact.getPhone}}</li>
-                    <li>Address: {{contact.getAddress}}</li>
-                </ul>
-                {% endfor %}
-        {% endif %}
+            <h2>Add a contact to your address book</h2>
+            <br>
+            <form action='/create_contact' method='post'>
+                <div class="form-group">
+                    <input class="form-control" id="name" name="name" type="text" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="Phone">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="address" name="address" type="text" placeholder="Address">
+                </div>
+                <div class='row'>
+                    <div class='col-sm-1'>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+            </form>
+            <form action="/delete_contacts" method="post">
+                    <div class='col-sm-1'>
+                        <button type="submit" class="btn btn-danger">Clear</button>
+                    </div>
+                </div>
+            </form>
+            {% if contacts is not empty %}
+                <br>
+                <h3>Contacts</h3>
+                {% for contact in contacts %}
+                    <h4>{{contact.getName}}</h4>
+                    <ul>
+                        <li>Phone: {{contact.getPhone}}</li>
+                        <li>Address: {{contact.getAddress}}</li>
+                    </ul>
+                    {% endfor %}
+            {% endif %}
+        </div>
     </body>
 </html>

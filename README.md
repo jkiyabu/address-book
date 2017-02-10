@@ -19,11 +19,14 @@ _no known bugs_
 
 ## Application Specs
 * _The page will allow you to store 1 contact in address book_
-  * **Example Input:**
-  * **Example Output:**
+  * **Example Input: John Doe, 5035035035, 1234 SE 24th Ave**
+  * **Example Output: Contacts: John Doe, phone: 5035035035, address: 1234 SE 24th Ave**
 * _The page will allow you to store multiple contacts in address book_
-  * **Example Input:**
-  * **Example Output:**
+  * **Example Input: John Doe, 5035035035, 1234 SE 24th Ave // Jane Doe, 9719719719, 9876 SW 31st Ave**
+  * **Example Output: Contacts: John Doe, phone: 5035035035, address: 1234 SE 24th Ave // Jane Doe, phone: 9719719719, address: 9876 SW 31st Ave**
+  * _The page will allow you to clear contacts from address book_
+    * **Example Input: clear**
+    * **Example Output: You cleared your address book**
 
 ## Technologies Used
 
