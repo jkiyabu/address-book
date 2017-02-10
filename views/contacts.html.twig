@@ -1,9 +1,29 @@
 <html>
     <head>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
         <title>Address Book</title>
     </head>
     <body>
         <h1>Address Book</h1>
+        <h3>Add a contact to your address book</h3>
+        <form action='/create_contact' method='post'>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" id="name" name="name" type="text">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input class="form-control" id="phone" name="phone" type="text">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input class="form-control" id="address" name="address" type="text">
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+        <form action="/delete_contacts" method="post">
+            <button type="submit" class="btn btn-danger">Clear</button>
+        </form>
 
 
     </body>
