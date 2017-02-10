@@ -11,7 +11,7 @@ _This application will allow you to add and store contacts to an address book._
 
 * _Clone GitHub repository_
 * _Run composer install in the top level of the project folder_
-* _Run the server and the web folder of the project_
+* _Run the server in the web folder of the project_
 
 ## Known Bugs
 
@@ -23,7 +23,7 @@ _no known bugs_
   * **Example Output:**
 * _The page will allow you to store multiple contacts in address book_
   * **Example Input:**
-  * **Example Output:** 
+  * **Example Output:**
 
 ## Technologies Used
 
